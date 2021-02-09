@@ -23,23 +23,26 @@ Rules: Words that begin with a vowel, add "way" to the end. Words that begin wit
 Test #1 Describe: pigLatin()
         Test: "It will add 'way' to the end of words that begin with a vowel"
         Expect(pigLatin("a")).toEqual("away");
+        
+Test #2 Test: "It will move the first consonant to the end and add 'ay'"
+				Expect(pigLatin("castle")).toEqual("astlecay");
 
-Test #2 Test: "It will move all the first consonants to the end and add 'ay'"
+Test #3 Test: "It will move all the first consonants to the end and add 'ay'"
         Expect(pigLatin("scary")).toEqual("aryscay");
 
-Test #3 Test: "If the first consonants include 'qu', it will move the 'u' along with the 'q'".
+Test #4 Test: "If the first consonants include 'qu', it will move the 'u' along with the 'q'".
         Expect(pigLatin("squeak")).toEqual("eaksquay");
 
-Test #4 Test: "If a word begins with 'y', treat 'y' as a consonant."
+Test #5 Test: "If a word begins with 'y', treat 'y' as a consonant."
         Expect(pigLatin("year")).toEqual("earyay");
 
-Test #5 Test: "Ignore non-alphabetical characters."
+Test #6 Test: "Ignore non-alphabetical characters."
 				Expect(pigLatin("#$#sc%ary*)).toEqual("aryscay");
 
-Test #6 Test: "Ignore capitalization, making the result lower-case"
+Test #7 Test: "Ignore capitalization, making the result lower-case"
 				Expect(pigLatin(ScaRY)).to("aryscay");
 
-Test #7 Test: "Translate multiple words seperately"
+Test #8 Test: "Translate multiple words seperately"
 				Expect(pigLatin("how are you?")).toEqual("owhay areway ouyay");
 
 ## Setup/Installation Requirements
