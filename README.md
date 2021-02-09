@@ -1,29 +1,54 @@
-# _{Application Name}_
+# Pig Dice
 
-#### _{Brief description of application}_
+#### This application translates user input to pig latin
 
-#### By _**{List of contributors}**_
+#### By **Marni Sucher Shanen Cross**
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* HTML/CSS
+* Bootstrap
+* jQuery
+* JavaScript
+* VS Code 
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+This program will translate user input to pig latin by following the rules described below.
+
+## Tests
+
+Rules: Words that begin with a vowel, add "way" to the end. Words that begin with one or more consonants, move all of the first consecutive consonants to the end, and add "ay". If the first consonants include "qu", move the "u" along with the "q". For words beginning with "y", treat "y" as a consonant.
+
+Test #1 Describe: pigLatin()
+        Test: "It will add 'way' to the end of words that begin with a vowel"
+        Expect(pigLatin("a")).toEqual("away");
+
+Test #2 Test: "It will move all the first consonants to the end and add 'ay'"
+        Expect(pigLatin("scary")).toEqual("aryscay");
+
+Test #3 Test: "If the first consonants include 'qu', it will move the 'u' along with the 'q'".
+        Expect(pigLatin("squeak")).toEqual("eaksquay");
+
+Test #4 Test: "If a word begins with 'y', treat 'y' as a consonant."
+        Expect(pigLatin("year")).toEqual("earyay");
+
+Test #5 Test: "Ignore non-alphabetical characters."
+				Expect(pigLatin("#$#sc%ary*)).toEqual("aryscay");
+
+Test #6 Test: "Ignore capitalization, making the result lower-case"
+				Expect(pigLatin(ScaRY)).to("aryscay");
+
+Test #7 Test: "Translate multiple words seperately"
+				Expect(pigLatin("how are you?")).toEqual("owhay areway ouyay");
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* Open terminal and navigate to 'Desktop'.
+* In terminal, type 'git clone https://github.com/marnionrails/Pig-Latin' and press enter.
+* In terminal, type 'cd Pig-Latin' and press enter.
+* In terminal, type 'code .' and press enter to open project in VS Code.
+* Right click on 'index.html' and select 'Open with Live Server' to view page in your favorite web browser.
 
 ## Known Bugs
 
@@ -32,8 +57,10 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+Available under GPL Licensing
+
+Copyright(c) 2021 Marni Sucher Shanen Cross
 
 ## Contact Information
 
-_{Add your contact information here.}_
+For support, please contact Marni Sucher at suchermarni@gmail.com or Shanen Cross at shanencross@yahoo.com
